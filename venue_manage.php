@@ -21,7 +21,7 @@
 	<title>Venue Manage</title>
 	<style type="text/css">
 		a:hover{
-			font-size: 24px;
+			font-size: 25px;
 		}
 		a{
 			color: blue;
@@ -37,21 +37,28 @@
 			margin-bottom:50px;
 			margin-left:auto;
 			margin-right:auto;
-			background-color: white;
+			background-color: silver;
+			
 		}
 		th{
-			font-size: 28px;
+			font-size: 30px;
 			text-align: center;
+			border-radius: 200px;
 			padding-top: 20px ;
 			padding-bottom: 20px ;
 			width: 50%;
 		}
 		td, input[type=text], select{
 			font-family: Times New Roman;
-			font-size: 22px;
+			font-size: 25px;
+			border-radius: 100px;
 			text-align: center;
 			padding-top: 2px ;
 			padding-bottom: 2px ;
+		}
+		input[type=text]:focus{
+            border-color:dodgerBlue;
+            box-shadow:0 0 8px 0 dodgerBlue;
 		}
 		input[type=submit]{
 			padding: 10px;
@@ -59,13 +66,23 @@
 			border: none;
 			background-color: #66CDAA;
 			font-weight: 900;
-			font-family: Times New Roman;
-			font-size: 20px;
+			font-family: Apple Chancery,cursive;
+			font-size: 25px;
+			border-radius: 100px;
 			text-align: center;
 			width: 120px;
 		}
+		input[type=text]:focus{
+            border-color:dodgerBlue;
+            box-shadow:0 0 8px 0 dodgerBlue;
+		}
 		input[type=submit]:hover{
 			background-color: #20B2AA;
+			border-radius: 100px;
+		}
+		input[type=text]:focus{
+            border-color:dodgerBlue;
+            box-shadow:0 0 8px 0 dodgerBlue;
 		}
 	</style>
 </head>
@@ -77,7 +94,7 @@
 	<div id="add">
 		<form action="venue_manage.php#add" method="POST">
 			<table align="center" cellspacing="20px">
-				<tr><th style="text-decoration: underline;"> >>> Add New Venue <<< </th></tr>
+				<tr><th style="text-decoration: ; font-size:60px; font-family:URW Chancery L, cursive;background-color:green;"> * Add New Venue * </th></tr>
 				<tr><td>Name: <input type="text" name="a_venuename" size="30" required></td></tr>
 				<tr><td>Information: <input type="text" name="a_venueinfo" size="30" placeholder="eg: Canteen/ For sports..." required></td></tr>
 				<tr><td><input type="submit" name="addvenue" value="Add">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -89,7 +106,7 @@
 	<div id="edit">
 		<form action="venue_manage.php#edit" method="POST">
 			<table align="center" cellspacing="20px">
-				<tr><th style="text-decoration: underline;"> >>> Edit Venue <<< </th></tr>
+				<tr><th style="text-decoration: ;font-size:60px; font-family:URW Chancery L, cursive;background-color:green;"> * Edit Venue * </th></tr>
 				<tr><td>Venue: 
 					<select name="edit_venue_name" style="width: auto;">
 						<option value="">Select</option>
@@ -117,7 +134,7 @@
 	<div id="delete">
 		<form action="venue_manage.php#delete" method="POST">
 			<table align="center" cellspacing="20px">
-				<tr><th style="text-decoration: underline;"> >>> Delete Venue <<< </th></tr>
+				<tr><th style="text-decoration: ;font-size:60px; font-family:URW Chancery L, cursive;background-color:green;"> * Delete Venue * </th></tr>
 				<tr><td>Venue: 
 					<select name="delete_venue_name" style="width: auto;">
 						<option value="">Select</option>

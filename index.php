@@ -27,7 +27,7 @@
   			left: 50%;
   			transform: translate(-50%, -50%);
 			font-family: 'Dancing Script', cursive;
-			font-size: 40px;
+			font-size: 30px;
 			margin-bottom: 30px;
 			color:yellow;
 		}
@@ -81,7 +81,7 @@
 	<hr width="auto" size="10" style="background: #808000">
 	<img src="image/events.jpg" style="width: 100%;">
 	<div class="top">
-		<h1>VELLORE INSTITUTE OF TECHNOLOGY Clubs and Chapters Events</h1>
+		<h1>VELLORE INSTITUTE OF TECHNOLOGY Clubs and Chapters Events</h>
 	</div>
 	
 	<hr width="auto" size="10" style="background: #808000">

@@ -33,7 +33,7 @@
 			margin-bottom:50px;
 			margin-left:auto;
 			margin-right:auto;
-			background-color: white;
+			background-color: silver;
 			text-align:center;
 			padding-top: 10px;
 			padding-left: 20px;
@@ -71,7 +71,7 @@
 </head>
 <body background="image\bg.png">
 	<div id="view" align="center">
-		<p style="padding-top: 30px; text-decoration: underline; font-size: 30px;font-weight: 900">My Booking</p>
+		<p style="padding-top: 30px; text-decoration: underline; font-size: 30px;font-weight: 900;font-family:URW Chancery L, cursive;background-color:green";>My Booking</p>
 		<hr>
 		<table align="center" cellpadding="6px" cellspacing="6px">
 			<tr>

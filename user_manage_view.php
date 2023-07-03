@@ -36,7 +36,7 @@
 			margin-bottom:50px;
 			margin-left:auto;
 			margin-right:auto;
-			background-color: white;
+			background-color: silver;
 			text-align:center;
 		}
 		th{
@@ -50,6 +50,7 @@
 		td{
 			border:1px solid black;
 			font-size: 20px;
+			border-radius: 100px;
 			font-family: Times New Roman;
 			text-align: center;
 			padding-top: 5px ;
@@ -63,6 +64,7 @@
 			font-weight: 700;
 			font-family: Times New Roman;
 			font-size: 18px;
+			border-radius: 100px;
 			text-align: center;
 			width: 100px;
 		}
@@ -93,7 +95,7 @@
 	<!--Sort according to UserID by default-->
 	<div id="view" align="center">
 		<br>
-		<p><span style="text-decoration: underline;font-weight: 900;font-size: 30px"> >>> View All User <<< </span></p>
+		<p><span style="text-decoration:;font-weight: 900;font-size: 30px;font-family:URW Chancery L, cursive;background-color:green;"> * View All User * </span></p>
 		<hr>
 		<form action="user_manage_view.php" method="POST" style="font-size: 20px;">
 			Sort according to user name in: &nbsp;&nbsp;

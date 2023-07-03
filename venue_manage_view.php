@@ -36,7 +36,7 @@
 			margin-bottom:50px;
 			margin-left:auto;
 			margin-right:auto;
-			background-color: white;
+			background-color: silver;
 			text-align:center;
 		}
 		th{
@@ -93,7 +93,7 @@
 	<!--Sort according to UserID by default-->
 	<div id="view" align="center">
 		<br>
-		<p><span style="text-decoration: underline;font-weight: 900;font-size: 30px"> >>> View All Venue <<< </span></p>
+		<p><span style="text-decoration: ;font-weight: 900; font-size: 60px;font-family:URW Chancery L, cursive;background-color:green;"> * View All Venue * </span></p>
 		<hr>
 		<form action="venue_manage_view.php" method="POST" style="font-size: 20px;">
 			Sort according to venue name in: &nbsp;&nbsp;

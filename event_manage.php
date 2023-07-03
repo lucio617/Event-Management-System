@@ -21,7 +21,7 @@
 	<title> Add/Edit Event </title>
 	<style type="text/css">
 		a:hover{
-			font-size: 24px;
+			font-size: 25px;
 		}
 		a{
 			color: blue;
@@ -37,28 +37,38 @@
 			margin-bottom:50px;
 			margin-left:auto;
 			margin-right:auto;
-			background-color: white;
+			background-color: silver;
 		}
 		th{
-			font-size: 28px;
+			font-size: 30px;
 			text-align: center;
+			border-radius: 200px;
 			padding-top: 20px ;
 			padding-bottom: 20px ;
 			width: 50%;
 		}
 		td, input[type=text], input[type=number], select{
-			font-family: Times New Roman;
-			font-size: 22px;
+			font-family: Apple Chancery;
+			font-size: 25px;
+			border-radius: 200px;
 			text-align: center;
 			padding-top: 2px ;
 			padding-bottom: 2px ;
 		}
+		input[type=text]:focus{
+            border-color:dodgerBlue;
+            box-shadow:0 0 8px 0 dodgerBlue;
+		}
 		textarea{
-			font-family: Times New Roman;
-			font-size: 18px;
+			font-family: Apple Chancery;
+			font-size: 25px;
 			text-align: center;
 			padding-top: 2px ;
 			padding-bottom: 2px ;
+		}
+		input[type=text]:focus{
+            border-color:dodgerBlue;
+            box-shadow:0 0 8px 0 dodgerBlue;
 		}
 		input[type=submit], input[type=reset]{
 			padding: 10px;
@@ -66,14 +76,24 @@
 			border: none;
 			background-color: #66CDAA;
 			font-weight: 900;
-			font-family: Times New Roman;
+			font-family: Apple Chancery;
 			font-size: 20px;
+			border-radius: 200px;
 			text-align: center;
 			width: 120px;
+		}
+		input[type=text]:focus{
+            border-color:dodgerBlue;
+            box-shadow:0 0 8px 0 dodgerBlue;
 		}
 		input[type=submit]:hover, input[type=reset]:hover{
 			background-color: #20B2AA;
 		}
+		input[type=text]:focus{
+            border-color:dodgerBlue;
+            box-shadow:0 0 8px 0 dodgerBlue;
+		}
+		
 	</style>
 </head>
 <body background="image\bg.png">
@@ -83,7 +103,7 @@
 	<div id="add">
 		<form action="event_manage.php#add" method="POST">
 			<table align="center" cellspacing="20px">
-				<tr><th style="text-decoration: underline;"> >>> Add New Event <<< </th></tr>
+				<tr><th style="text-decoration: ;font-size:60px; font-family:URW Chancery L, cursive;background-color:green;"> * Add New Event * </th></tr>
 				<tr><td>Name: <input type="text" name="a_eventname" size="35" required></td></tr>
 				<tr>
 					<td>Date: 
@@ -125,7 +145,7 @@
 	<div id="delete">
 		<form action="event_manage.php#delete" method="POST">
 			<table align="center" cellspacing="20px">
-				<tr><th style="text-decoration: underline;"> >>> Delete Event <<< </th></tr>
+				<tr><th style="text-decoration: ;font-size:60px; font-family:URW Chancery L, cursive;background-color:green;"> * Delete Event * </th></tr>
 				<tr><td>Event: 
 					<select name="delete_event_name">
 						<?php
@@ -211,15 +231,17 @@
 			if($result_read_event_id){
 				while($row = mysqli_fetch_array($result_read_event_id, MYSQLI_ASSOC)){
 					$eid=$row['EventID'];
-					//Check if any booking was made
-					//If one or more booking found, delete fail
-					$check_booking="SELECT EventID FROM booking_details WHERE EventID='$eid'";
-					$result_check_booking = mysqli_query($conn, $check_booking);
-					if(mysqli_num_rows($result_check_booking)>0){
-						$message="Fail to delete event. One or more booking found.";
-						echo "<script type='text/javascript'>alert('$message');</script>";
-					}
-					else{
+					// Check if any booking was made
+					// If one or more booking found, delete fail
+					// $check_booking="SELECT EventID FROM booking_details WHERE EventID=$eid";
+					// $result_check_booking = mysqli_query($conn, $check_booking);
+					// if(mysqli_num_rows($result_check_booking)<0){
+					// 	$message="Fail to delete event. One or more booking found.";
+					// 	echo "<script type='text/javascript'>alert('$message');</script>";
+					// }
+					    //first delete booking
+						$delete_booking="DELETE FROM booking_details WHERE EventID='$eid'";
+						mysqli_query($conn,$delete_booking);
 						$delete_event = "DELETE FROM event_details WHERE EventID='$eid'";
 						$result_delete_event = mysqli_query($conn, $delete_event);
 						if($result_delete_event){
@@ -230,7 +252,7 @@
 							$message="Fail to delete event. Please try again.";
 							echo "<script type='text/javascript'>alert('$message');</script>";
 						}
-					}
+					//}
 				}
 			}
 		}

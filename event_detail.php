@@ -14,7 +14,7 @@
 		if($login_status=="no"){
 			$message="Please login to continue.";
 			echo "<script type='text/javascript'>alert('$message');</script>";
-			header("Refresh: 0; login_register.php");
+			//header("Refresh: 0; login_register.php");
 		}
 
 		//Purchase ticket to join event, Only ONE booking per user
@@ -38,7 +38,7 @@
 			if($number_of_rows>0){
 				$message="Sorry, you purchased the ticket for the event. For every event, only one ticket can be purchased by each user.";
 				echo "<script type='text/javascript'>alert('$message');</script>";
-				header("Refresh: 0; index.php");
+				//header("Refresh: 0; index.php");
 			}
 			//If not purchase, check ticket availability
 			else{
@@ -65,7 +65,7 @@
 								$result_insert_booking = mysqli_query($conn, $insert_booking);
 								if($result_insert_booking){
 					    			$message="Ticket purchase success. You can check your booking details at 'My Booking'.";
-									echo "<script type='text/javascript'>alert('$message');</script>";	
+									echo "<script type='text/javascript'>alert('Ticket purchase success. You can check your booking details at 'My Booking'.');</script>";	
 								}
 								else{
 									$message="Ticket purchase fail. Please try again. Back to home page.";

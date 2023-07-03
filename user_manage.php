@@ -1,7 +1,6 @@
 <?php
 	//Connect database
 	include "database/connect.php";
-	
 	//Read session
 	include 'session.php';
 	$uid=$_SESSION['UserID'];
@@ -10,7 +9,6 @@
 		echo "<script type='text/javascript'>alert('$message');</script>";
 		header("Refresh: 0, login_register.php");
 	}
-
 	//Read button script
 	include "top_button.html";
 ?>
@@ -37,21 +35,27 @@
 			margin-bottom:50px;
 			margin-left:auto;
 			margin-right:auto;
-			background-color: white;
+			background-color: silver;
 		}
 		th{
 			font-size: 28px;
 			text-align: center;
+			border-radius: 200px;
 			padding-top: 20px ;
 			padding-bottom: 20px ;
 			width: 50%;
 		}
-		td, input[type=text], input[type=email], select{
-			font-family: Times New Roman;
-			font-size: 22px;
+		td, input[type=text], input[type=email],input[type=password], select{
+			font-family: Apple Chancery;
+			border-radius: 100px;
 			text-align: center;
-			padding-top: 2px ;
-			padding-bottom: 2px ;
+			padding-top:10px;
+			padding-bottom:10px;
+			
+		}
+		input[type=text]:focus{
+            border-color:dodgerBlue;
+            box-shadow:0 0 8px 0 dodgerBlue;
 		}
 		input[type=submit], input[type=reset]{
 			padding: 10px;
@@ -59,28 +63,35 @@
 			border: none;
 			background-color: #66CDAA;
 			font-weight: 900;
-			font-family: Times New Roman;
+			font-family: Apple Chancery;
 			font-size: 20px;
+			border-radius: 100px;
 			text-align: center;
 			width: 120px;
+		}
+		input[type=text]:focus{
+            border-color:dodgerBlue;
+            box-shadow:0 0 8px 0 dodgerBlue;
 		}
 		input[type=submit]:hover, input[type=reset]:hover{
 			background-color: #20B2AA;
 		}
+		input[type=text]:focus{
+            border-color:dodgerBlue;
+            box-shadow:0 0 8px 0 dodgerBlue;
+		}
 	</style>
 </head>
 <body background="image\bg.png">
-
 	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
-		<hr width="auto" size="10" style="background: #808000">
-
+		<hr width="auto" size="10" style="background: #808000"> 
 	<div id="add">
 		<form action="user_manage.php#add" method="POST">
 			<table align="center" cellspacing="20px">
-				<tr><th style="text-decoration: underline;"> >>> Add New User <<< </th></tr>
+				<tr><th style="text-decoration: ;font-size:60px; font-family:URW Chancery L, cursive;background-color:green;"> * Add New User *</th></tr>
 				<tr><td>User ID: <input type="text" name="a_userid" size="30" required></td></tr>
 				<tr><td>Name: <input type="text" name="a_username" size="30" required></td></tr>
-				<tr><td>Password: <input type="password" name="a_userpass" size="30" required></td></tr>
+				<tr><td>Password: <input type="password" name="a_userpass"  width="100px" size="50" required></td></tr>
 				<tr><td>Email: <input type="email" name="a_useremail" size="30" required></td></tr>
 
 				<tr><td>User Type: 
@@ -99,7 +110,7 @@
 	<div id="edit">
 		<form action="user_manage.php#edit" method="POST">
 			<table align="center" cellspacing="20px">
-				<tr><th style="text-decoration: underline;"> >>> Edit User <<< </th></tr>
+				<tr><th style="text-decoration: ;font-size:60px;font-family:URW Chancery L, cursive;background-color:green;"> * Edit User * </th></tr>
 				<tr><td>User ID: 
 					<select name="edit_user_id" style="width: 140px;">
 						<option value="">Select</option>
@@ -127,7 +138,7 @@
 	<div id="delete">
 		<form action="user_manage.php#delete" method="POST">
 			<table align="center" cellspacing="20px">
-				<tr><th style="text-decoration: underline;"> >>> Delete User <<< </th></tr>
+				<tr><th style="text-decoration: ;font-size:60px;font-family:URW Chancery L, cursive;background-color:green;"> * Delete User * </th></tr>
 				<tr><td>User ID: 
 					<select name="delete_user_id" style="width: 140px;">
 						<option value="">Select</option>

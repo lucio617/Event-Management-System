@@ -75,6 +75,7 @@
 			font-family: Times New Roman;
 			color: black;
 			font-size: 26px;
+			border-radius: 100px;
 			font-weight: 900;
 			width: 50%;
 			text-align: center;
@@ -87,6 +88,7 @@
 			font-family: Times New Roman;
 			color: black;
 			font-size: 26px;
+			border-radius: 100px;
 			font-weight: 900;
 			width: 50%;
 			text-align: center;
@@ -102,9 +104,14 @@
 			background-color: #66CDAA;
 			font-weight: 700;
 			font-size: 18px;
+			border-radius: 100px;
 			font-family: Times New Roman;
 			text-align: center;
 			width: 22%;
+		}
+		input[type=text]:focus{
+            border-color:dodgerBlue;
+            box-shadow:0 0 8px 0 dodgerBlue;
 		}
 		input[type=submit]:hover, input[type=button]:hover{
 			background-color: #20B2AA;
@@ -116,8 +123,13 @@
 			border-style: none;
 			border-bottom: 2px solid #66CDAA;
 			font-size: 18px;
+			border-radius: 100px;
 			font-family: Times New Roman;
 			width: 60%;
+		}
+		input[type=text]:focus{
+            border-color:dodgerBlue;
+            box-shadow:0 0 8px 0 dodgerBlue;
 		}
 		.loginform{
 			margin-top: 50px;
@@ -126,8 +138,9 @@
 			margin-left: 33%;
 			margin-right: 33%;
 			text-align: center;
-			background-color: white; 
+			background-color: silver; 
 			font-size: 18px;
+			
 			font-family: Times New Roman;
 			z-index: 1;
 			position: absolute;
@@ -139,8 +152,9 @@
 			margin-left: 33%;
 			margin-right: 33%;
 			text-align: center;
-			background-color: white; 
+			background-color: silver; 
 			font-size: 18px;
+			
 			font-family: Times New Roman;
 			position: absolute;
 		}
@@ -172,7 +186,7 @@
 	</script>
 </head>
 
-<body background="image/watercolour-2542465__340.jpg" >
+<body background="https://wallpaperaccess.com/full/2314950.jpg" >
 	<!--Login form-->
 	<form method="POST" class="loginform" action="login_register.php">
 		<br><br>

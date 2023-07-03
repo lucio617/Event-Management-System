@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>    
+<data>
+<User> 
+    <user_id>19BCE0497</user_id>
+    <name>Nishant Tiwari</name>
+    <email>culcruzader@gmail.com</email>
+    <user_type>Admin</user_type>
+
+    <user_id>18BCE0414</user_id>
+    <name>Nishu</name>
+    <email>abcxyz@gmail.com</email>
+    <user_type>Student</user_type>
+</User>
+
+<Booking>
+    <No.>1</No.>
+    <Date_and_Time>2021-11-18 13:42:31</Date_and_Time>
+    <Event_name>Movie Night: Aladdin 2019</Event_name>
+    <Event_date>2022-11-12</Event_date>
+    <Event_time>22:00:00</Event_time>
+    <Venue>GSC Cinema - IOI Mall Puchong</Venue>
+
+    <No.>2</No.>
+    <Date_and_Time>2021-12-01 20:52:55</Date_and_Time>
+    <Event_name>Alumni Meet</Event_name>
+    <Event_date>2020-03-15</Event_date>
+    <Event_time>00:00:00</Event_time>
+    <Venue>AKGEC</Venue>
+     
+    <No.>3</No.>
+    <Date_and_Time>2021-12-01 20:53:03</Date_and_Time>
+    <Event_name>Fresher Party</Event_name>
+    <Event_date>2019-12-30</Event_date>
+    <Event_time>21:00:00</Event_time>
+    <Venue>AKGEC</Venue>
+
+</Booking>
+
+<Event>
+    <No.>1</No.>
+    <Name>Convocation</Name>
+    <Date>2020-08-31</Date>
+    <Time>21:00:00</Time>
+    <Category>Degree Celebration</Category>
+    <Ticket_price>5</Ticket_price>
+    <Total_ticket>12</Total_ticket>
+    <Ticket_Sold>4</Ticket_Sold>
+    <Venue>Stadium Merdeka</Venue>
+    <Organizer>AUTAR002</Organizer>
+</Event>
+</data>

@@ -34,14 +34,14 @@
 			margin-bottom:50px;
 			margin-left:auto;
 			margin-right:auto;
-			background-color: white;
+			background-color: silver;
 			padding: 30px;
 			min-height: 400px;
 		}
 		th{
 			font-size: 30px;
 			text-align: center;
-			text-decoration: underline;
+			background-color: green;
 			padding-bottom: 5px;
 		}
 		td{
